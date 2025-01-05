@@ -31,10 +31,34 @@ const projects = [
     },
     { 
         img: "images/projects/project-6.png", 
+        title: "Number Guessing Game", 
+        description: "A game where the player guesses a randomly generated number, with feedback on whether the guess is too high or low.", 
+        link: "https://rafiframadhana.github.io/Number-Guessing-Game/" 
+    },
+    { 
+        img: "images/projects/project-7.png", 
+        title: "Password Generator", 
+        description: "Generates customizable random passwords with options for length and character types (letters, numbers, symbols).", 
+        link: "https://rafiframadhana.github.io/Password-Generator/" 
+    },
+    { 
+        img: "images/projects/project-8.png", 
+        title: "Temperature Conversion", 
+        description: "Converts temperatures between Celsius, Fahrenheit, and Kelvin.", 
+        link: "https://rafiframadhana.github.io/Temperature-conversion/" 
+    },
+    { 
+        img: "images/projects/project-9.png", 
+        title: "Dice Roller Game", 
+        description: "Simulates rolling one or more dice and displays the results visually.", 
+        link: "https://rafiframadhana.github.io/Dice-Roller-Game/" 
+    },
+    { 
+        img: "images/projects/project-10.png", 
         title: "Youtube Clone", 
         description: "A simple YouTube clone, featuring a basic layout with video thumbnails, titles, and a functional video player.", 
         link: "https://rafiframadhana.github.io/youtube-clone/" 
-    }
+    },
     
 ];
 
