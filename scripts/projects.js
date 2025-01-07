@@ -55,6 +55,12 @@ const projects = [
     },
     { 
         img: "images/projects/project-10.png", 
+        title: "Stopwatch", 
+        description: "A minimalist stopwatch with start, stop, and reset functions, designed with a modern interface.", 
+        link: "https://rafiframadhana.github.io/Stopwatch/" 
+    },
+    { 
+        img: "images/projects/project-11.png", 
         title: "Youtube Clone", 
         description: "A simple YouTube clone, featuring a basic layout with video thumbnails, titles, and a functional video player.", 
         link: "https://rafiframadhana.github.io/youtube-clone/" 
