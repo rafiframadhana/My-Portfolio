@@ -21,6 +21,7 @@
     border-radius: 10em;
     background-color: white;
     transition: background-color 250ms;
+    cursor: pointer;
 }
 
 .toggle-checkbox:checked~.toggle-slot {
