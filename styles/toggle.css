@@ -2,76 +2,103 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
 }
 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.switch input {
+.toggle-checkbox {
+    position: absolute;
     opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 34px;
+    height: 0;
+    width: 0;
 }
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;  
-    width: 26px;  
-    border-radius: 50%; 
-    left: 4px; 
-    bottom: 4px;  
+.toggle-slot {
+    font-size: 10px;
+    position: relative;
+    height: 3.5em;
+    width: 7em;
+    border: 0px solid transparent;
+    border-radius: 10em;
     background-color: white;
-    transition: 0.4s;
+    transition: background-color 250ms;
 }
 
-input:checked + .slider {
-    background-color: #4CAF50;
+.toggle-checkbox:checked~.toggle-slot {
+    background-color: #374151;
 }
 
-input:checked + .slider:before {
-    transform: translateX(26px);
+.toggle-button {
+    transform: translate(0.3em, 0.25em);
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
 }
 
-.switch:hover input + .slider {
-    background-color: #6c757d;
+.toggle-checkbox:checked~.toggle-slot .toggle-button {
+    background-color: #485367;
+    box-shadow: inset 0px 0px 0px 0.75em white;
+    transform: translate(3.65em, 0.25em);
 }
 
-.switch:hover input:checked + .slider {
-    background-color: #0056b3;
+.sun-icon {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    color: #ffbb52;
 }
+
+.sun-icon-wrapper {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    opacity: 1;
+    transform: translate(2em, 2em) rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+}
+
+.toggle-checkbox:checked~.toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(3em, 2em) rotate(0deg);
+}
+
+.moon-icon {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    color: white;
+}
+
+.moon-icon-wrapper {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    opacity: 0;
+    transform: translate(11em, 2em) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2.5, .46, .71);
+}
+
+.toggle-checkbox:checked~.toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(2em, 2em) rotate(-15deg);
+}
+
 
 @media (max-width: 768px) {
-    .switch {
+    .toggle-container {
         margin-top: 30px;
+        margin-bottom: 10px;
     }
 }
 
 @media (max-width: 991px) {
-    .switch {
+    .toggle-container {
         margin-top: 30px;
+        margin-bottom: 10px;
     }
-}
-
-
-body.dark-mode {
-    background-color: #121212;
-    color: white;
 }
