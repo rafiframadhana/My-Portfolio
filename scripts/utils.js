@@ -22,7 +22,7 @@ const body = document.body;
 
 const savedTheme = localStorage.getItem('theme');
 
-if (savedTheme === 'dark') {
+if (savedTheme === 'dark' || savedTheme === null) {
     body.classList.add('dark-mode');
     themeToggle.checked = true;
 } else {
