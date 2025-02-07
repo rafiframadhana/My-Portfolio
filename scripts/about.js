@@ -1,4 +1,5 @@
 const skills = [
+    { name: "React JS", icon: "images/icon/react-js.png" },
     { name: "JavaScript", icon: "images/icon/js.png" },
     { name: "HTML5", icon: "images/icon/html.png" },
     { name: "CSS3", icon: "images/icon/css.png" },
