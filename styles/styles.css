@@ -635,3 +635,84 @@ footer {
     }
 
 }
+
+
+/* Extra Animations */
+
+#about {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#about.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.skill.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+#projects {
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#projects.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+#certifications {
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#certifications.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cert-box {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.cert-box.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+#contact {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#contact.show {
+    opacity: 1;
+    transform: translateY(0);
+}
