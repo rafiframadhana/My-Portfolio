@@ -32,20 +32,61 @@ const certifications = [
 ];
 
 
+
 const certificationsContainer = document.getElementById("certifications-container");
 
+function getInitialCertificationsCount() {
+    return window.innerWidth <= 768 ? 2 : 4;
+}
 
-certifications.forEach(cert => {
-    const certCard = `
-        <div class="col-lg-3 col-md-6">
-            <a href="${cert.link}" target="_blank" class="cert-link">
-                <div class="cert-box text-center">
-                    <img src="${cert.img}" alt="${cert.title}" class="cert-img mb-3">
-                    <h5>${cert.title}</h5>
-                    <p>${cert.issuer}</p>
-                </div>
-            </a>
-        </div>
-    `;
-    certificationsContainer.innerHTML += certCard;
+let initialCertifications = getInitialCertificationsCount();
+
+function loadCertifications() {
+    let html = "";
+    for (let i = 0; i < certifications.length; i++) {
+        const cert = certifications[i];
+        html += `
+            <div class="col-lg-3 col-md-6 cert-item" style="${i < initialCertifications ? '' : 'display: none;'}">
+                <a href="${cert.link}" target="_blank" class="cert-link">
+                    <div class="cert-box text-center">
+                        <img src="${cert.img}" alt="${cert.title}" class="cert-img mb-3">
+                        <h5>${cert.title}</h5>
+                        <p>${cert.issuer}</p>
+                    </div>
+                </a>
+            </div>
+        `;
+    }
+    certificationsContainer.innerHTML = html;
+
+    if (certifications.length <= initialCertifications) {
+        document.getElementById("load-more-cert-btn").style.display = "none";
+    }
+}
+
+function showAllCertifications() {
+    document.querySelectorAll(".cert-item").forEach(item => {
+        item.style.display = "block";
+    });
+    document.getElementById("load-more-cert-btn").style.display = "none";
+}
+
+loadCertifications();
+
+const loadMoreCertButton = document.createElement("button");
+loadMoreCertButton.id = "load-more-cert-btn";
+loadMoreCertButton.textContent = "Load More";
+loadMoreCertButton.className = "btn btn-primary mt-3";
+loadMoreCertButton.addEventListener("click", showAllCertifications);
+
+certificationsContainer.insertAdjacentElement("afterend", loadMoreCertButton);
+
+window.addEventListener("resize", () => {
+    let newInitialCertifications = getInitialCertificationsCount();
+    if (newInitialCertifications !== initialCertifications) {
+        initialCertifications = newInitialCertifications;
+        loadCertifications();
+    }
 });
+
+

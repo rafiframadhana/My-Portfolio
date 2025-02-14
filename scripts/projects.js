@@ -77,21 +77,66 @@ const projects = [
 
 const projectsContainer = document.getElementById("projects-container");
 
+function getInitialProjectsCount() {
+    return window.innerWidth <= 991 ? 4 : 6;
+}
 
-projects.forEach(project => {
-    const projectCard = `
-        <div class="col-lg-4 col-md-6">
-            <a href="${project.link}" target="_blank" class="project-link">
-                <div class="project-card">
-                    <img src="${project.img}" alt="${project.title}">
-                    <div class="project-info">
-                        <h5>${project.title}</h5>
-                        <p>${project.description}</p>
+let initialProjects = getInitialProjectsCount();
+
+function loadProjects() {
+    let html = "";
+    for (let i = 0; i < projects.length; i++) {
+        const project = projects[i];
+        html += `
+            <div class="col-lg-4 col-md-6 project-item" style="${i < initialProjects ? '' : 'display: none;'}">
+                <a href="${project.link}" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <img src="${project.img}" alt="${project.title}">
+                        <div class="project-info">
+                            <h5>${project.title}</h5>
+                            <p>${project.description}</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-    `;
-    projectsContainer.innerHTML += projectCard;
+                </a>
+            </div>
+        `;
+    }
+    projectsContainer.innerHTML = html;
+
+    if (projects.length <= initialProjects) {
+        document.getElementById("load-more-projects-btn").style.display = "none";
+    }
+}
+
+function showAllProjects() {
+    document.querySelectorAll(".project-item").forEach(item => {
+        item.style.display = "block";
+    });
+    document.getElementById("load-more-projects-btn").style.display = "none";
+}
+
+loadProjects();
+
+const loadMoreProjectsButton = document.createElement("button");
+loadMoreProjectsButton.id = "load-more-projects-btn";
+loadMoreProjectsButton.textContent = "Load More";
+loadMoreProjectsButton.className = "btn btn-primary mt-3";
+loadMoreProjectsButton.addEventListener("click", showAllProjects);
+
+projectsContainer.insertAdjacentElement("afterend", loadMoreProjectsButton);
+
+window.addEventListener("resize", () => {
+    let newInitialProjects = getInitialProjectsCount();
+    if (newInitialProjects !== initialProjects) {
+        initialProjects = newInitialProjects;
+        loadProjects();
+    }
 });
+
+
+
+
+
+
+
 

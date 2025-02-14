@@ -348,13 +348,22 @@ section h2 {
 #about {
     background: var(--section-bg);
     padding: 80px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#about.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #about p {
-    font-size: 1.1rem;
-    max-width: 850px;
+    font-size: 1.3rem;
+    max-width: 1250px;
     margin: 0 auto;
     text-align: center;
+    line-height: 50px;
     color: var(--about-text-color);
 }
 
@@ -389,6 +398,14 @@ section h2 {
     width: 120px;
     text-align: center;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.skill.show {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .skill img {
@@ -414,15 +431,30 @@ section h2 {
 #projects {
     padding: 80px 20px;
     background: var(--project-bg);
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.project-card {
+#projects.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card {   
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0px 6px 20px var(--project-card-shadow);
     background: var(--project-card-bg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .project-card img {
@@ -470,14 +502,21 @@ section h2 {
 }
 
 
+
 /* Certifications Section */
 #certifications {
     padding: 80px 20px;
     background: var(--certifications-bg);
     text-align: center;
     border-radius: 20px;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
+#certifications.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 #certifications .content {
     display: flex;
@@ -496,14 +535,22 @@ section h2 {
     box-shadow: 0px 4px 10px var(--cert-box-shadow);
     padding: 20px;
     margin: 30px 0;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 300px;
     text-align: center;
     display: inline-block;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.cert-box.show {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .cert-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0px 6px 20px var(--cert-box-hover-shadow);
 }
 
@@ -542,11 +589,20 @@ section h2 {
 }
 
 
+
 /* Contact Section */
 #contact {
     padding: 80px 20px;
     text-align: center;
     background: var(--contact-bg);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#contact.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #contact a {
@@ -637,82 +693,61 @@ footer {
 }
 
 
-/* Extra Animations */
-
-#about {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+#load-more-cert-btn {
+    border: none;
+    font-size: 1.2rem;
+    background: var(--button-bg);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
-#about.show {
-    opacity: 1;
-    transform: translateY(0);
+#load-more-cert-btn:hover {
+    background: var(--button-hover);
+    transform: translateY(-3px);
 }
 
-.skill {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+#load-more-cert-btn:focus {
+    outline: 2px solid var(--button-hover);
+    outline-offset: 2px;
 }
 
-.skill.show {
-    opacity: 1;
-    transform: scale(1);
+#load-more-projects-btn {
+    display: block;
+    margin: 20px auto;
+    border: none;
+    font-size: 1.2rem;
+    background: var(--button-bg);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
-
-#projects {
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+#projects-container{
+    margin-bottom: 50px;
 }
 
-#projects.show {
-    opacity: 1;
-    transform: translateY(0);
+#load-more-projects-btn:hover {
+    background: var(--button-hover);
+    transform: translateY(-3px);
 }
 
-.project-card {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+#load-more-projects-btn:focus {
+    outline: 2px solid var(--button-hover);
+    outline-offset: 2px;
 }
 
-.project-card.show {
-    opacity: 1;
-    transform: scale(1);
-}
-
-
-#certifications {
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-#certifications.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.cert-box {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-.cert-box.show {
-    opacity: 1;
-    transform: scale(1);
-}
-
-
-#contact {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-#contact.show {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width: 768px) {
+    #load-more-cert-btn{
+        width: 120px;
+        font-size: 14px;
+    }
+    #load-more-projects-btn{
+        width: 120px;
+        font-size: 14px;
+    }
 }
