@@ -358,7 +358,7 @@ section h2 {
     transform: translateY(0);
 }
 
-#about p {
+.about-text {
     font-size: 1.3rem;
     max-width: 1250px;
     margin: 0 auto;
@@ -423,6 +423,7 @@ section h2 {
 .skill p {
     font-size: 1rem;
     color: var(--about-text-color);
+    text-align: center;
 }
 
 

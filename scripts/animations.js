@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const skillsIcons = document.querySelectorAll(".skill");
 
     const observerOptions = {
-        threshold: 0.3,
+        threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
