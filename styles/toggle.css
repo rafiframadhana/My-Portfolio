@@ -1,92 +1,50 @@
-.toggle-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.toggle-checkbox {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.toggle-slot {
-    font-size: 10px;
-    position: relative;
-    height: 3.5em;
-    width: 7em;
-    border: 0px solid transparent;
-    border-radius: 10em;
-    background-color: white;
-    transition: background-color 250ms;
-    cursor: pointer;
-}
-
-.toggle-checkbox:checked~.toggle-slot {
-    background-color: #374151;
-}
-
-.toggle-button {
-    transform: translate(0.3em, 0.25em);
-    position: absolute;
-    height: 3em;
-    width: 3em;
+.toggle {
+    background-color: hsla(0, 0%, 0%, 0.107);
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    background-color: #ffeccf;
-    box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
-    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 50px 20px rgba(0, 0, 0, .1);
+    line-height: 1;
 }
 
-.toggle-checkbox:checked~.toggle-slot .toggle-button {
-    background-color: #485367;
-    box-shadow: inset 0px 0px 0px 0.75em white;
-    transform: translate(3.65em, 0.25em);
+.toggle:hover {
+    opacity: 0.9;
 }
 
-.sun-icon {
-    position: absolute;
-    height: 6em;
-    width: 6em;
-    color: #ffbb52;
+
+.input {
+    display: none;
 }
 
-.sun-icon-wrapper {
-    position: absolute;
-    height: 6em;
-    width: 6em;
-    opacity: 1;
-    transform: translate(2em, 2em) rotate(15deg);
-    transform-origin: 50% 50%;
-    transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+.icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
 }
 
-.toggle-checkbox:checked~.toggle-slot .sun-icon-wrapper {
-    opacity: 0;
-    transform: translate(3em, 2em) rotate(0deg);
+.icon--moon {
+    transition-delay: 200ms;
 }
 
-.moon-icon {
-    position: absolute;
-    height: 6em;
-    width: 6em;
-    color: white;
+.icon--sun {
+    transform: scale(0);
 }
 
-.moon-icon-wrapper {
-    position: absolute;
-    height: 6em;
-    width: 6em;
-    opacity: 0;
-    transform: translate(11em, 2em) rotate(0deg);
-    transform-origin: 50% 50%;
-    transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2.5, .46, .71);
+#switch:checked+.icon--moon {
+    transform: rotate(360deg) scale(0);
 }
 
-.toggle-checkbox:checked~.toggle-slot .moon-icon-wrapper {
-    opacity: 1;
-    transform: translate(2em, 2em) rotate(-15deg);
+#switch:checked~.icon--sun {
+    transition-delay: 200ms;
+    transform: scale(1) rotate(360deg);
+}
+
+.icon--moon svg {
+    color: #EBC815;
+    fill: #EBC815;
 }
 
 
@@ -94,6 +52,9 @@
     .toggle-container {
         margin-top: 30px;
         margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -101,5 +62,8 @@
     .toggle-container {
         margin-top: 30px;
         margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

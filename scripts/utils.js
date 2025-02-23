@@ -17,7 +17,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 //Switch Theme
 
-const themeToggle = document.getElementById('theme-toggle');
+const themeToggle = document.getElementById('switch');
 const body = document.body;
 
 const savedTheme = localStorage.getItem('theme');

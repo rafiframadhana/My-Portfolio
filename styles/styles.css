@@ -13,6 +13,8 @@
     /* Buttons */
     --button-bg: #e67e22;
     --button-hover: #d35400;
+    --button-bg-load-more: #425e79;
+    --button-hover-load-more: #5e8bb4;
 
     /* Home */
     --home-bg-gradient: linear-gradient(135deg, #2980b9, #8e44ad);
@@ -63,6 +65,8 @@ body.dark-mode {
     /* Buttons */
     --button-bg: #ff9800;
     --button-hover: #e65100;
+    --button-bg-load-more: #ff9800;
+    --button-hover-load-more: #e65100;
 
     /* Home */
     --home-bg-gradient: linear-gradient(135deg, #333, #000);
@@ -697,7 +701,7 @@ footer {
 #load-more-cert-btn {
     border: none;
     font-size: 1.2rem;
-    background: var(--button-bg);
+    background: var(--button-bg-load-more);
     color: #fff;
     padding: 10px 20px;
     border-radius: 4px;
@@ -706,12 +710,12 @@ footer {
 }
 
 #load-more-cert-btn:hover {
-    background: var(--button-hover);
+    background: var(--button-hover-load-more);
     transform: translateY(-3px);
 }
 
 #load-more-cert-btn:focus {
-    outline: 2px solid var(--button-hover);
+    outline: 2px solid var(--button-hover-load-more);
     outline-offset: 2px;
 }
 
@@ -720,7 +724,7 @@ footer {
     margin: 20px auto;
     border: none;
     font-size: 1.2rem;
-    background: var(--button-bg);
+    background: var(--button-bg-load-more);
     color: #fff;
     padding: 10px 20px;
     border-radius: 4px;
@@ -733,12 +737,12 @@ footer {
 }
 
 #load-more-projects-btn:hover {
-    background: var(--button-hover);
+    background: var(--button-hover-load-more);
     transform: translateY(-3px);
 }
 
 #load-more-projects-btn:focus {
-    outline: 2px solid var(--button-hover);
+    outline: 2px solid var(--button-hover-load-more);
     outline-offset: 2px;
 }
 
