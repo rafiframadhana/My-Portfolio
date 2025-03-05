@@ -634,7 +634,11 @@ footer {
     font-size: 1rem;
 }
 
-
+@media (max-width:1300px) {
+    .profile-text {
+        margin-right: 50px;
+    }
+}
 
 @media (max-width:1249px) {
     #home {
