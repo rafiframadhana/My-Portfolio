@@ -1,22 +1,30 @@
 const projects = [
     {
-        "img": "images/projects/coffee-culture.png",
-        "title": "Coffee Shop: Coffee Culture",
-        "description": "A modern coffee shop website offering an immersive browsing experience, featuring a curated coffee menu, easy ordering, and a stylish design.",
-        "link": "https://coffeeculture-id.netlify.app/"
-    },    
+        img: "images/projects/coffee-culture.png",
+        title: "Coffee Shop: Coffee Culture",
+        description: "A modern coffee shop website offering an immersive browsing experience, featuring a curated coffee menu, easy ordering, and a stylish design.",
+        link: "https://coffeeculture-id.netlify.app/"
+    },
     {
-        img: "images/projects/amazon-clone.png",
-        title: "Amazon Clone",
-        description: "A replica of Amazon's online store, showcasing product listings, a shopping cart, and a checkout process.",
-        link: "https://rafiframadhana.github.io/amazon-clone/"
+        img: "images/projects/bray-surfing.png",
+        title: "Clothing Store",
+        description: "An online clothing store for Bray Surfing, showcasing product listings and allowing users to create account browse products, add to cart, and checkout.",
+        link: "https://bray-surfing.netlify.app/"
+        
     },
     {
         img: "images/projects/recipebot-ai.png",
         title: "RecipeBot AI",
         description: "An AI-powered recipe suggestion app that helps users discover new recipes based on available ingredients.",
         link: "https://recipebot-ai.netlify.app/"
+    },  
+    {
+        img: "images/projects/amazon-clone.png",
+        title: "Amazon Clone",
+        description: "A replica of Amazon's online store, showcasing product listings, a shopping cart, and a checkout process.",
+        link: "https://rafiframadhana.github.io/amazon-clone/"
     },
+    
     {
         img: "images/projects/weather-app.png",
         title: "Weather App",
@@ -28,13 +36,6 @@ const projects = [
         title: "Travel Journal",
         description: "A digital travel journal where users can document their trips, upload photos, and share experiences.",
         link: "https://rafiframadhana.github.io/travel-journal/"
-    },
-    {
-        img: "images/projects/bray-surfing.png",
-        title: "Clothing Store",
-        description: "A basic online clothing store for Bray Surfing, showcasing product listings and allowing users to browse through available items.",
-        link: "https://rafiframadhana.github.io/Bray-Surfing-Clothing-Store/"
-        
     },
     {
         img: "images/projects/youtube-clone.png",
