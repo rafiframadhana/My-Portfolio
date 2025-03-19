@@ -1,6 +1,7 @@
 const skills = [
     { name: "Next.js", icon: "images/icon/nextjs.png" },
     { name: "React", icon: "images/icon/react.png" },
+    { name: "TypeScript", icon: "images/icon/typescript.png" },
     { name: "JavaScript", icon: "images/icon/js.png" },
     { name: "HTML5", icon: "images/icon/html.png" },
     { name: "CSS3", icon: "images/icon/css.png" },
