@@ -20,3 +20,6 @@ This repository contains the source code for my personal portfolio website, show
 ## Contact
 - [GitHub](https://github.com/rafiframadhana)
 - [LinkedIn](https://www.linkedin.com/in/rafif-ramadhana-230603250/)
+
+# Note
+New Version Available on **[github.com/rafiframadhana/my-portfolio-react](https://github.com/rafiframadhana/my-portfolio-react)**
